@@ -9,10 +9,7 @@ def connection():
                             passwd = "ubuntu",
                             db = "sushi")
     c = conn.cursor()
-
     return c, conn
-
-
 
 app = Flask(__name__)
 
@@ -54,12 +51,6 @@ def menu():
 
 @app.route('/list')
 def list():
-    try:
-        c, conn = connection()
-
-    except Exception as e:
-        return "e"
-
     return render_template('list.html')
 
 if __name__ == '__main__':
