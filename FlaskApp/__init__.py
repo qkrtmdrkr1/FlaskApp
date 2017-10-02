@@ -1,5 +1,14 @@
 from flask import Flask, render_template
+import MySQLdb
 
+def connection():
+    conn = MySQLdb.connect(host="localhost",
+                            user = "root",
+                            passwd = "ubuntu",
+                            db = "sushi")
+    c = conn.cursor()
+
+    return c, conn
 
 app = Flask(__name__)
 
