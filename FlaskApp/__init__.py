@@ -1,8 +1,6 @@
 from flask import Flask, render_template
 import MySQLdb
 
-from dbconnect import connection
-
 def connection():
     conn - MySQLdb.connect(host="localhost",
                             user = "root",
