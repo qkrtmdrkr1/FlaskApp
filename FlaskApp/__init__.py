@@ -53,8 +53,9 @@ def menu():
 def list():
     c, conn = connection()
     c.execute("SELECT * FROM data")
-    d = c.fetchone()
-    return d
+    d = c.fetchall()
+
+    return d[0]    
     # templist = []
     # for element in d:
     #     templist.append(list(element))
