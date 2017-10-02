@@ -27,12 +27,12 @@
         </tr>
         </thead>
         <tbody>
-            {% for j in range(0,15) %}
+            {% for j in range(0, 15) %}
             <tr>
-                    <td>row[j][0]</td>
-                    <td>row[j][1]</td>
-                    <td>row[j][2]</td>
-                    <td>row[j][3]</td>
+                    <td>{{ row[j][0] }}</td>
+                    <td>{{ row[j][1] }}</td>
+                    <td>{{ row[j][2] }}</td>
+                    <td>{{ row[j][3] }}</td>
             </tr>
             {% endfor %}
         </tbody>
