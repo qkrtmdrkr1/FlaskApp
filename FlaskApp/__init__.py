@@ -4,7 +4,7 @@ import MySQLdb
 from dbconnect import connection
 
 def connection():
-    conn - MySQLdb.connect(host="http://52.15.187.101",
+    conn - MySQLdb.connect(host="localhost",
                             user = "root",
                             passwd = "ubuntu",
                             db = "sushi")
@@ -56,7 +56,7 @@ def menu():
 def list():
     try:
         c, conn = connection()
-        
+
     except Exception as e:
         return "e"
 
