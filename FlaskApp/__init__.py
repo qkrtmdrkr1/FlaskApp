@@ -54,13 +54,14 @@ def list():
     c, conn = connection()
     c.execute("SELECT * FROM data")
     d = c.fetchall()
-    templist = []
-    for element in d:
-        templist.append(list(element))
-    conn.commit()
-    conn.close()
+    return d
+    # templist = []
+    # for element in d:
+    #     templist.append(list(element))
+    # conn.commit()
+    # conn.close()
 
-    return render_template('list.html', row = templist)
+    # return render_template('list.html', row = templist)
 
 #############################
 @app.route('/check')
