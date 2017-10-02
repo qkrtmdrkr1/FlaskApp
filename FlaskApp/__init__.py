@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 import MySQLdb
+from dbconnect import connection
+
 
 def connection():
     conn = MySQLdb.connect(host="localhost",
@@ -51,6 +53,14 @@ def menu():
 @app.route('/list')
 def list():
     return render_template('list.html')
+
+@app.route('/check')
+def check():
+    try:
+        c, conn = connection()
+        return "Okay!!"
+    except Exception as e:
+        return "Error"
 
 if __name__ == '__main__':
     app.run()
