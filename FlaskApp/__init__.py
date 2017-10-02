@@ -51,6 +51,7 @@ def menu():
 
 @app.route('/list')
 def lists():
+    cnt = 0
     c, conn = connection()
     c.execute("SELECT * FROM data")
     d = c.fetchall()
@@ -58,10 +59,11 @@ def lists():
     templist = []
     for element in d:
         templist.append(list(element))
+        cnt += 1
     conn.commit()
     conn.close()
 
-    return render_template('list.html', row = templist)
+    return render_template('list.html', row = templist, cnt = cnt)
 
 #############################
 @app.route('/check')
