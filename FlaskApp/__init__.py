@@ -50,7 +50,7 @@ def menu():
     return render_template('menu.html')
 
 @app.route('/list')
-def list():
+def lists():
     c, conn = connection()
     c.execute("SELECT * FROM data")
     d = c.fetchall()
