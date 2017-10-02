@@ -27,30 +27,14 @@
         </tr>
         </thead>
         <tbody>
+            {% for j in range(0,15) %}
             <tr>
-                    <td>Tuna</td>
-                    <td>5</td>
-                    <td>3</td>
-                    <td>Test1</td>
+                    <td>row[j][0]</td>
+                    <td>row[j][1]</td>
+                    <td>row[j][2]</td>
+                    <td>row[j][3]</td>
             </tr>
-            <tr>
-                    <td>Salmon</td>
-                    <td>6</td>
-                    <td>2</td>
-                    <td>Test2</td>
-            </tr>
-            <tr>
-                    <td>Flat Fish</td>
-                    <td>10</td>
-                    <td>7</td>
-                    <td>Test3</td>
-            </tr>
-            <tr>
-                    <td>Egg</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td>Test4</td>
-            </tr>
+            {% endfor %}
         </tbody>
     </table>
     </div>

@@ -51,8 +51,18 @@ def menu():
 
 @app.route('/list')
 def list():
-    return render_template('list.html')
+    c, conn = connection()
+    c.execute("SELECT * FROM data")
+    d = c.fetchall()
+    templist = []
+    for element in d:
+        templist.append(list(element))
+    conn.commit()
+    conn.close()
 
+    return render_template('list.html', row = templist)
+
+#############################
 @app.route('/check')
 def check():
     try:
@@ -60,6 +70,6 @@ def check():
         return "Okay!!"
     except Exception as e:
         return "Error"
-
+##############################
 if __name__ == '__main__':
     app.run()
