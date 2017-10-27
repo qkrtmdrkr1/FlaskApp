@@ -3,7 +3,7 @@ import MySQLdb
 
 
 def connection():
-    conn = MySQLdb.connect(host="192.168.123.122",
+    conn = MySQLdb.connect(host="192.168.123.111",
                             user = "park",
                             passwd = "ubuntu",
                             db = "sushi")
