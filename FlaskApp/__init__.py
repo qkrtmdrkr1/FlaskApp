@@ -3,8 +3,8 @@ import MySQLdb
 
 
 def connection():
-    conn = MySQLdb.connect(host="localhost",
-                            user = "root",
+    conn = MySQLdb.connect(host="192.168.123.122",
+                            user = "park",
                             passwd = "ubuntu",
                             db = "sushi")
     c = conn.cursor()
@@ -76,3 +76,6 @@ def check():
 ##############################
 if __name__ == '__main__':
     app.run()
+
+
+
